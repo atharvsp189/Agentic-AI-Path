@@ -1,0 +1,10 @@
+langchain
+python-dotenv
+langchain-openai
+langchain-core
+langchain-community
+bs4
+faiss-cpu
+langchain_google_genai
+google-generativeai
+langchain-groq
