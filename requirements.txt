@@ -1,10 +1,15 @@
+ipykernel
 langchain
 python-dotenv
+openai
 langchain-openai
 langchain-core
 langchain-community
-bs4
 faiss-cpu
+bs4
 langchain_google_genai
 google-generativeai
 langchain-groq
+chromadb
+wikipedia
+arxiv
