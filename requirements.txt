@@ -13,3 +13,4 @@ langchain-groq
 chromadb
 wikipedia
 arxiv
+langgraph
