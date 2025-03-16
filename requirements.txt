@@ -16,3 +16,7 @@ arxiv
 langgraph
 langgraph-checkpoint-sqlite
 tavily-python
+llama-index
+llama-index-llms-gemini 
+llama-index-embeddings-gemini
+mcp
