@@ -1,0 +1,3 @@
+# Chainlit Configuration
+debug: false
+log_level: warns

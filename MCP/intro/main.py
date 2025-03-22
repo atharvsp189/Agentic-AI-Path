@@ -1,7 +1,6 @@
 import os
 from mcp.server.fastmcp import FastMCP
 from tavily import TavilyClient
-from bs4 import BeautifulSoup
 import os 
 
 
