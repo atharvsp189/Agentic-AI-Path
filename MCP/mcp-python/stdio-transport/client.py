@@ -12,27 +12,44 @@ os.environ["OPNEAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 from langchain_openai import ChatOpenAI
 model = ChatOpenAI(model="gpt-4o")
 
+
 server_params = StdioServerParameters(
     command="python",
-    args=["server.py"]
+    args=["server.py"],
 )
 
 
-async def run_agent(query: str):
+system_prompt = "You are a helpful Research Assistant with access to set of tools. You are given a query and you need to search it about that over the internet and need to write a detailed report about that."
+
+async def run_agent():
     async with stdio_client(server_params) as (read, write):
         async with ClientSession(read, write) as session:
+            print("Inside Client Session")
             await session.initialize()
+            print("Session Initialized")
             tools = await load_mcp_tools(session)
             agent = create_react_agent(model, tools)
+            
+            print("Agent Started Ask Queries...")
+            query = input("Query: ")
+
+            agent_response = await agent.ainvoke(
+                {"messages": [ 
+                    {"role": "system", "content": system_prompt}, 
+                    {"role": "user", "content": query} 
+                ]}
+            )
+            
+
+
             agent_response = await agent.ainvoke(
                 {"messages": query}
             )
-            return agent_response["messages"]
+
+            print("Agent Response: ")
+            print(agent_response["content"])
+            
 
 if __name__ == '__main__':
     print("Inside Main")
-    print("Agent Started Ask Queries...")
-    query = input("Query: ")
-    result = asyncio.run(run_agent(query))
-    print("Result : ")
-    print(result)
+    result = asyncio.run(run_agent())
