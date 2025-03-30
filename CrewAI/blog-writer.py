@@ -4,15 +4,15 @@ from crewai_tools import SerperDevTool
 import os
 from dotenv import load_dotenv
 load_dotenv()
-groq_api_key= os.getenv("GROQ_API_KEY")
+google_api_key= os.getenv("GOOGLE_API_KEY")
 
 topic = "AI in Art"
 
 # A1 Researcher + Web Search 
 # LLM Provider
 llm = LLM(
-    model="groq/llama-3.3-70b-versatile",
-    api_key=groq_api_key,
+    model="gemini/gemini-2.0-flash",
+    api_key=google_api_key,
 )
 # Tool
 search_tool = SerperDevTool(n=2)
