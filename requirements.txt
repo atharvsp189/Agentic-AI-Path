@@ -23,3 +23,7 @@ mcp
 utils
 crewai
 crewai_tools
+unstructured>=0.11.0
+pyowm>=3.3.0
+
+streamlit
