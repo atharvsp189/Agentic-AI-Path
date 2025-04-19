@@ -1,0 +1,189 @@
+(.venv) PS D:\Playground\BrowserUse> python main.py
+INFO     [browser_use] BrowserUse logging setup complete with level info
+INFO     [telemetry] Anonymized telemetry enabled. See https://docs.browser-use.com/development/telemetry for more information.
+D:\Playground\BrowserUse\.venv\Lib\site-packages\browser_use\agent\service.py:321: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  import pkg_resources
+INFO     [agent] 🧠 Starting an agent with main_model=models/gemini-2.0-flash +vision, planner_model=None, extraction_model=None
+INFO     [agent] 🚀 Starting task: Go to Instagram.com and search for virat kohli and get the captions and top3 comments from his 3 latest posts
+INFO     [agent] 📍 Step 1
+INFO     [browser] 🔌  Reusing existing browser found running on http://localhost:9222
+INFO     [agent] 🤷 Eval: Unknown - I have just started the task and need to navigate to Instagram.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have not yet navigated to Instagram.
+INFO     [agent] 🎯 Next goal: Navigate to Instagram.com
+INFO     [agent] 🛠️  Action 1/1: {"go_to_url":{"url":"https://www.instagram.com/"}}
+INFO     [controller] 🔗  Navigated to https://www.instagram.com/
+INFO     [agent] 📍 Step 2
+INFO     [agent] 👍 Eval: Success - I have successfully navigated to Instagram.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram.
+INFO     [agent] 🎯 Next goal: Click on the search bar to search for virat kohli
+INFO     [agent] 🛠️  Action 1/1: {"click_element_by_index":{"index":43}}
+INFO     [controller] 🖱️  Clicked button with index 43: 
+INFO     [agent] 📍 Step 3
+INFO     [agent] 👍 Eval: Success - I have successfully clicked on the search bar.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram and clicked on the search bar.
+INFO     [agent] 🎯 Next goal: Type virat kohli in the search bar.
+INFO     [agent] 🛠️  Action 1/1: {"input_text":{"index":27,"text":"virat kohli"}}
+INFO     [controller] ⌨️  Input virat kohli into index 27
+INFO     [agent] 📍 Step 4
+INFO     [agent] 👍 Eval: Success - I have successfully typed virat kohli in the search bar.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram, clicked on the search bar and typed virat kohli.
+INFO     [agent] 🎯 Next goal: Click on the first search result for virat kohli.
+INFO     [agent] 🛠️  Action 1/1: {"click_element_by_index":{"index":16}}
+INFO     [controller] 🖱️  Clicked button with index 16: 
+INFO     [agent] 📍 Step 5
+INFO     [agent] ⚠ Eval: Failed - The previous action did not lead to Virat Kohli's profile. It led to the general Instagram feed. I need to find a way to navigate to his profile.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram, clicked on the search bar and typed virat kohli. The previous action did not lead to Virat Kohli's profile.        
+INFO     [agent] 🎯 Next goal: Navigate directly to Virat Kohli's profile using the URL.
+INFO     [agent] 🛠️  Action 1/1: {"go_to_url":{"url":"https://www.instagram.com/virat.kohli/"}}  
+INFO     [controller] 🔗  Navigated to https://www.instagram.com/virat.kohli/
+INFO     [agent] 📍 Step 6
+INFO     [agent] 👍 Eval: Success - I have successfully navigated to Virat Kohli's Instagram profile.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram and am now on Virat Kohli's profile.
+INFO     [agent] 🎯 Next goal: Click on the first post to view its details.
+INFO     [agent] 🛠️  Action 1/1: {"click_element_by_index":{"index":14}}
+INFO     [controller] 🖱️  Clicked button with index 14: 
+INFO     [agent] 📍 Step 7
+INFO     [agent] 👍 Eval: Success - I have successfully clicked on the first post.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram and am now viewing the first post.
+INFO     [agent] 🎯 Next goal: Extract the caption and top 3 comments from the current post.     
+INFO     [agent] 🛠️  Action 1/1: {"extract_content":{"goal":"Extract the caption and top 3 commennts from the current post.","should_strip_link_urls":true}}
+INFO     [controller] 📄  Extracted from page
+: ```json
+{
+  "caption": "Another one—but this isn’t just any new spot. This time, we’re right in the heart of Gurgaon’s most happening hub! Welcome to one8 Commune Golf Course Road—a space that’s warm & inviting, a brand-new menu, and an experience that feels fresh yet unmistakably Commune. We’ve built something special here, and we can’t wait for you to be a part of it. See you soon, Gurgaon!", 
+  "top_3_comments": [
+    {
+      "username": "vk_super__fan__18",
+      "comment": "This is my idol ❤️🙌",
+      "likes": "857"
+    },
+    {
+      "username": "chhayahits",
+      "comment": "King kohli removed all the advertisements in his account? 😱",
+      "likes": "3,142"
+    },
+    {
+      "username": "karuna_das45",
+      "comment": "",
+      "likes": "1,433"
+    }
+  ]
+}
+```
+
+INFO     [agent] 📍 Step 8
+INFO     [agent] 👍 Eval: Success - I have successfully extracted the caption and top 3 comments from the first post.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram and extracted the data from the first post. I need to do this for 2 more posts.
+INFO     [agent] 🎯 Next goal: Close the current post.
+INFO     [agent] 🛠️  Action 1/1: {"click_element_by_index":{"index":0}}
+INFO     [controller] 🖱️  Clicked button with index 0: 
+INFO     [agent] 📍 Step 9
+INFO     [agent] 👍 Eval: Success - I have successfully closed the first post.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram and extracted the data from the first post. I need to do this for 2 more posts.
+INFO     [agent] 🎯 Next goal: Click on the second post to view its details.
+INFO     [agent] 🛠️  Action 1/1: {"click_element_by_index":{"index":15}}
+INFO     [controller] 🖱️  Clicked button with index 15: 
+INFO     [agent] 📍 Step 10
+INFO     [agent] 👍 Eval: Success - I have successfully closed the first post and clicked on the second post.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram and extracted the data from the first post. I need to do this for 2 more posts. I have now clicked on the second post.
+INFO     [agent] 🎯 Next goal: Extract the caption and top 3 comments from the current post.     
+INFO     [agent] 🛠️  Action 1/1: {"extract_content":{"goal":"Extract the caption and top 3 commennts from the current post.","should_strip_link_urls":true}}
+INFO     [controller] 📄  Extracted from page
+: ```json
+{
+  "caption": "🤝 @sporting.beyond #sportingbeyond",
+  "top_3_comments": [
+    {
+      "username": "shivhumm",
+      "comment": "Mini heart attack fr",
+      "likes": "10,432"
+    },
+    {
+      "username": "nikhil.nigam17",
+      "comment": "Jai bajrang bali ❤️ jai shree ram 🙏",
+      "likes": "344"
+    },
+    {
+      "username": "peace.lover_18",
+      "comment": "",
+      "likes": "769"
+    }
+  ]
+}
+```
+
+INFO     [agent] 📍 Step 11
+INFO     [agent] 👍 Eval: Success - I have successfully extracted the caption and top 3 comments from the second post.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram and extracted the data from the first and second posts. I need to do this for 1 more post.
+INFO     [agent] 🎯 Next goal: Close the current post.
+INFO     [agent] 🛠️  Action 1/1: {"click_element_by_index":{"index":0}}
+INFO     [controller] 🖱️  Clicked button with index 0: 
+INFO     [agent] 📍 Step 12
+INFO     [agent] 👍 Eval: Success - I have successfully closed the second post.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram and extracted the data from the first and second posts. I need to do this for 1 more post.
+INFO     [agent] 🎯 Next goal: Click on the third post to view its details.
+INFO     [agent] 🛠️  Action 1/1: {"click_element_by_index":{"index":16}}
+INFO     [controller] 🖱️  Clicked button with index 16: 
+INFO     [agent] 📍 Step 13
+INFO     [agent] 👍 Eval: Success - I have successfully closed the second post and clicked on the third post.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram and extracted the data from the first and second posts. I need to do this for 1 more post. I have now clicked on the third post.
+INFO     [agent] 🎯 Next goal: Extract the caption and top 3 comments from the current post.     
+INFO     [agent] 🛠️  Action 1/1: {"extract_content":{"goal":"Extract the caption and top 3 commennts from the current post.","should_strip_link_urls":true}}
+INFO     [controller] 📄  Extracted from page
+: ```json
+{
+  "caption": "What a great honour meeting our honourable prime minister shri narendra modi ji today @narendramodi Thank you sir for inviting us to the prime ministers residence. 🇮🇳",
+  "top_3_comments": [
+    {
+      "username": "dc__69",
+      "comment": "🇮🇳❤️",
+      "likes": "1"
+    },
+    {
+      "username": "itz______hiya______",
+      "comment": "❤️❤️❤️❤️❤️❤️😍",
+      "likes": "4"
+    },
+    {
+      "username": "soukjyio_25678",
+      "comment": "❤️❤️❤️👑👑",
+      "likes": "8"
+    }
+  ]
+}
+```
+
+INFO     [agent] 📍 Step 14
+INFO     [agent] 👍 Eval: Success - I have successfully extracted the caption and top 3 comments from the third post.
+INFO     [agent] 🧠 Memory: I need to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram and extracted the data from the first, second, and third posts.
+INFO     [agent] 🎯 Next goal: Close the current post.
+INFO     [agent] 🛠️  Action 1/1: {"click_element_by_index":{"index":0}}
+INFO     [controller] 🖱️  Clicked button with index 0: 
+INFO     [agent] 📍 Step 15
+INFO     [agent] 👍 Eval: Success - I have successfully extracted the captions and top 3 comments from the 3 latest posts.
+INFO     [agent] 🧠 Memory: I needed to go to Instagram and search for virat kohli and get the captions and top3 comments from his 3 latest posts. I have navigated to Instagram and extracted the data from the first, second, and third posts.
+INFO     [agent] 🎯 Next goal: Complete the task.
+INFO     [agent] 🛠️  Action 1/1: {"done":{"success":true,"data":{"posts":[{"post_title":"Post 1",,"post_url":"https://www.instagram.com/virat.kohli/","caption":"Another one—but this isn’t just any new spot. This time, we’re right in the heart of Gurgaon’s most happening hub! Welcome to one8 Commune Golf Course Road—a space that’s warm & inviting, a brand-new menu, and an experience that feels fresh yet unmistakably Commune. We’ve built something special here, and we can’t wait for you to be a part of it. See you soon, Gurgaon!","comments":["This is my idol ❤️🙌","King kohli reemoved all the advertisements in his account? 😱",""]},{"post_title":"Post 2","post_url":"https://www.instagram.com/virat.kohli/","caption":"🤝 @sporting.beyond #sportingbeyond","comments":["Mini heart attack fr","Jai bajrang bali ❤️ jai shree ram 🙏",""]},{"post_title":"Post 3","post_url":""https://www.instagram.com/virat.kohli/","caption":"What a great honour meeting our honourable prime minister shri narendra modi ji today @narendramodi Thank you sir for inviting us to the prime ministers residence. 🇮🇳","comments":["🇮🇳❤️","❤️❤️❤️❤️❤️❤️😍","❤️❤️❤️👑👑"]}]}}}
+INFO     [agent] 📄 Result: {"posts": [{"post_title": "Post 1", "post_url": "https://www.instagram.com/virat.kohli/", "caption": "Another one\u2014but this isn\u2019t just any new spot. This time, we\u2019re right in the heart of Gurgaon\u2019s most happening hub! Welcome to one8 Commune Golf Course Road\u2014a space that\u2019s warm & inviting, a brand-new menu, and an experience that feels fresh yet unmistakably Commune. We\u2019ve built something special here, and we can\u2019t wait for you to be a part of it. See you soon, Gurgaon!", "comments": ["This is my idol \u2764\ufe0f\ud83d\ude4c", "King kohli removed all the advertisements in his account? \ud83d\ude31", ""]}, {"post_title": "Post 2", "post_url": "https://www.instagram.com/virat.kohli/", "caption": "\ud83e\udd1d @sporting.beyond #sportingbeyond", "comments": ["Mini heart attack fr", "Jai bajrang bali \u2764\ufe0f jai shree ram \ud83d\ude4f", ""]}, {"post_title": "Post 3", "post_url": "https://www.instagram.com/virat.kohli/", "caption": "What a great honour meeting our honourable prime minister shri narendra modi ji today @narendramodi Thank you sir for inviting us to the prime ministers residence. \ud83c\uddee\ud83c\uddf3", "comments": ["\ud83c\uddee\ud83c\uddf3\u2764\ufe0f", "\u2764\ufe0f\u2764\ufe0f\u2764\ufe0f\u2764\ufe0f\u2764\ufe0f\u2764\ufe0f\ud83d\ude0d", "\u2764\ufe0f\u2764\ufe0f\u2764\ufe0f\ud83d\udc51\ud83d\udc51"]}]}
+INFO     [agent] ✅ Task completed
+INFO     [agent] ✅ Successfully
+INFO     [agent] 📝 Total input tokens used (approximate): 79838
+
+--------------------------------
+Title:    Post 1
+URL:      https://www.instagram.com/virat.kohli/
+Captions: Another one—but this isn’t just any new spot. This time, we’re right in the heart of Gurgaon’s most happening hub! Welcome to one8 Commune Golf Course Road—a space that’s warm & inviting, a brand-new menu, and an experience that feels fresh yet unmistakably Commune. We’ve built something special here, and we can’t wait for you to be a part of it. See you soon, Gurgaon!       
+Comments: ['This is my idol ❤️🙌', 'King kohli removed all the advertisements in his account? 😱'', '']
+
+--------------------------------
+Title:    Post 2
+URL:      https://www.instagram.com/virat.kohli/
+Captions: 🤝 @sporting.beyond #sportingbeyond
+Comments: ['Mini heart attack fr', 'Jai bajrang bali ❤️ jai shree ram 🙏', '']
+
+--------------------------------
+Title:    Post 3
+URL:      https://www.instagram.com/virat.kohli/
+Captions: What a great honour meeting our honourable prime minister shri narendra modi ji today @narendramodi Thank you sir for inviting us to the prime ministers residence. 🇮🇳
+Comments: ['🇮🇳❤️', '❤️❤️❤️❤️❤️❤️😍', '❤️❤️❤️👑👑']
+(.venv) PS D:\Playground\BrowserUse> 

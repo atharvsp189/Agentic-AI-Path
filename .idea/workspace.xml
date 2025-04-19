@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2d8ab081-3d6e-4109-b936-116b4e38135a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/tenacity-9.0.0.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/tenacity-9.0.0.dist-info/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/tenacity-9.0.0.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/tenacity-9.0.0.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/tenacity-9.0.0.dist-info/REQUESTED" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/tenacity-9.0.0.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/tenacity-9.0.0.dist-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Lib/site-packages/tenacity/wait.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Lib/site-packages/tenacity/wait.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner" beforeDir="false" afterPath="$PROJECT_DIR$/CrewAI/Trip-Planner" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/api_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/CrewAI/Trip-Planner/api_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/aruguments_cli.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/cli_app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/curl_request.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/groq_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/images/trip_planner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/streamlit_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/CrewAI/Trip-Planner/streamlit_app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/tools/browser_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/CrewAI/Trip-Planner/tools/browser_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/tools/calculator_tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/CrewAI/Trip-Planner/tools/calculator_tools.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/trip_agents.py" beforeDir="false" afterPath="$PROJECT_DIR$/CrewAI/Trip-Planner/trip_agents.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CrewAI/Trip-Planner/trip_tasks.py" beforeDir="false" afterPath="$PROJECT_DIR$/CrewAI/Trip-Planner/trip_tasks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LangGraph/Report-Writer.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/LangGraph/Report-Writer.ipynb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2vuCePlpRd4hy9uZHnOxZ1khLQL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Playground/Agents"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-4f4e415b4190-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.26053.29" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d8ab081-3d6e-4109-b936-116b4e38135a" name="Changes" comment="" />
+      <created>1744985667155</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744985667155</updated>
+    </task>
+    <servers />
+  </component>
+</project>
