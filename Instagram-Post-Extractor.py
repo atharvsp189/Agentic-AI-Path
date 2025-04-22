@@ -9,11 +9,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import asyncio
+
+# Initialize LLM
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash",
     temperature=0.0,
 )
 
+# define structure of output post
 class post(BaseModel):
     post_title: str
     post_url: str
@@ -23,19 +26,22 @@ class post(BaseModel):
 class Posts(BaseModel):
     posts: List[post]
 
-
+# opening it on systems browser
+# or else open web in inbuilt chromium
 browser = Browser(
     config=BrowserConfig(
         browser_binary_path="C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
     )
 )
 
+# make it use structure we defined
 controller = Controller(output_model=Posts)
 
 Task = "Go to Instagram.com and search for virat kohli and get the captions and top3 comments from his 3 latest posts"
 
 
 async def main():
+    # Initialize Agent
     agent = Agent(
         task=Task,
         llm=llm,
@@ -44,7 +50,9 @@ async def main():
     )
     
     history = await agent.run()
+    # getting final result
     result = history.final_result()
+    # also we can get visited urls screenshots etc. more details in documentataion
     
     if result:
         try:
